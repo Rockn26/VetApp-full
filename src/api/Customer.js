@@ -2,7 +2,6 @@ import axios from "axios";
 
 export const getCustomers = async () => {
     const { data } = await axios.get(import.meta.env.VITE_APP_BASE_URL + "customers");
-    console.log(data);
     return data;
     }
 
