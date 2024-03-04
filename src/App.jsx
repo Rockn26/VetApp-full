@@ -7,10 +7,12 @@ import CustomerPage from './pages/CustomerPage/CustomerPage'
 import DoctorPage from './pages/DoctorPage/DoctorPage'
 import ReportPage from './pages/ReportPage/ReportPage'
 import VaccinePage from './pages/VaccinePage/VaccinePage'
+import Navbar from './components/Navbar/Navbar'
 
 const App = () => {
   return (
     <div>
+      <Navbar />
       <Routes>
         <Route path="/animal" element={<AnimalPage />} />
         <Route path="/appointment" element={<AppointmentPage />} />
