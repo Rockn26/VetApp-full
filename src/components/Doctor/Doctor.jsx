@@ -15,9 +15,6 @@ const Doctor = ({ doctorProp, setDoctors }) => {
     setDoctor({ ...doctor, [event.target.name]: event.target.value });
   };
 
-  
-
-  
 
   return (
     <div className="doctor-component">
