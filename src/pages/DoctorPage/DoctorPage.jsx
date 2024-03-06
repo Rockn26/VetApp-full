@@ -5,6 +5,7 @@ import "./DoctorPage.style.css";
 import Doctor from "../../components/Doctor/Doctor";
 import { handleAdd } from "../../handler/DoctorHandler";
 import Adder from "../../components/Adder/Adder";
+import AvailableDates from "../../components/AvailableDates/AvailableDates";
 
 
 
@@ -83,7 +84,7 @@ const DoctorPage = () => {
         <Adder handlerFunction={() => {handleAdd(doctor, setDoctor, setDoctors)}}/>
 
       </div>
-    /* available date buraya gelecek */
+       < AvailableDates doctors={doctors}  />
     </div>
 
   );
