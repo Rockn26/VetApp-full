@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { createDoctor, getDoctors } from "../../api/Doctor";
 import "./DoctorPage.style.css";
 import Doctor from "../../components/Doctor/Doctor";
+import { handleAdd } from "../../handler/DoctorHandler";
+import Adder from "../../components/Adder/Adder";
 
 
 
@@ -26,18 +28,7 @@ const DoctorPage = () => {
     setDoctor({ ...doctor, [event.target.name]: event.target.value });
   }
 
-  const handleAdd = () => {
-    createDoctor(doctor).then((data) => {
-      setDoctors(prev => [...prev, data]);
-      setDoctor({
-        name: "",
-        phone: "",
-        email: "",
-        address: "",
-        city: "",
-      });
-    });
-  }
+  
 
   return (
     <div className="doctor-page-component">
@@ -88,11 +79,13 @@ const DoctorPage = () => {
           value={doctor.city}
           placeholder="City"
         />
-        <button onClick={handleAdd} className="doctor-add-button">
-          Add Doctor
-        </button>
+        
+        <Adder handlerFunction={() => {handleAdd(doctor, setDoctor, setDoctors)}}/>
+
       </div>
+    /* available date buraya gelecek */
     </div>
+
   );
 };
 
