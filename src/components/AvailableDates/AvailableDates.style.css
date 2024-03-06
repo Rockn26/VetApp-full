@@ -1,0 +1,5 @@
+.available-dates-component {
+    display: flex;
+    justify-self: center;
+    gap: 10px;
+}
