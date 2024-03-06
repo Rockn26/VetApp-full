@@ -4,8 +4,8 @@ import './Adder.style.css'
 const Adder = ({handlerFunction}) => {
   return (
     <div>
-      <button onClick={handlerFunction} className="doctor-add-button">
-          Add Doctor
+      <button onClick={handlerFunction} className="entity-add-button">
+          Add
         </button>
     </div>
   )
