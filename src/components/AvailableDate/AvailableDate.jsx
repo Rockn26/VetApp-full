@@ -1,10 +1,12 @@
-import React from "react";
-import Updater from "../Updater/Updater";
-import { handleDelete, handleUpdate } from "../../handler/AvailableDateHandler";
+import React, { useContext } from "react";
 import { useState } from "react";
-import Deleter from "../Deleter/Deleter";
+import {updateAvailableDate, deleteAvailableDate} from "../../api/AvailableDate"
+import ErrorContext from "../../context/error/ErrorContext";
+import "./AvailableDate.style.css";
+
 
 const AvailableDate = ({ availableDateProp, setAvailableDates }) => {
+  const {setShowAlert, setAlertMessage} = useContext(ErrorContext);
   const [availableDate, setAvailableDate] = useState(availableDateProp);
 
   const handleChange = (event) => {
@@ -16,6 +18,30 @@ const AvailableDate = ({ availableDateProp, setAvailableDates }) => {
     });
   };
 
+  const handleUpdate = () => {
+    updateAvailableDate(availableDate).then((data) => {
+      setAvailableDate(data);
+    }).catch(error => {
+      setShowAlert(true)
+      setAlertMessage(error.response.data)
+      setTimeout(() => {
+          setShowAlert(false)
+      }, 3000);
+  })
+  }
+
+  const handleDelete = () => {
+    deleteAvailableDate(availableDate.id).then(() => {
+      setAvailableDates((prev) => prev.filter((object) => object.id !== availableDate.id));
+    }).catch(error => {
+      setShowAlert(true)
+      setAlertMessage(error.response.data)
+      setTimeout(() => {
+          setShowAlert(false)
+      }, 3000);
+  })
+  }
+
 
   return (
     <div className="available-date-component">
@@ -26,13 +52,13 @@ const AvailableDate = ({ availableDateProp, setAvailableDates }) => {
         value={availableDate.availableDate}
       />
 
-    
       <div>
         {availableDate.doctor.name}
       </div>
-  
-      <Updater handlerFunction={() => handleUpdate(availableDate, setAvailableDate)}/>
-      <Deleter handlerFunction={() => handleDelete(availableDate, setAvailableDates)}/>
+
+      <button onClick={handleUpdate}>Update</button>
+      <button onClick={handleDelete} className="delete-button">Delete</button>
+
     </div>
   );
   
