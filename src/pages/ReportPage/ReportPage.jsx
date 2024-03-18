@@ -106,7 +106,7 @@ const ReportPage = () => {
                     value={report.price}
                     placeholder="Price"
                 />
-                <select onChange={handleAppointmentSelect}>
+                <select onChange={handleAppointmentSelect} value={report.appointment.id || ""}>
                     <option value="">Select Appointment</option>
                     {appointments.map((appointment) => (
                         <option key={appointment.id} value={appointment.id}>

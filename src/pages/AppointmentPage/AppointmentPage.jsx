@@ -234,6 +234,7 @@ const AppointmentPage = () => {
                             doctor: selectedDoctor,
                         });
                     }}
+                    value={appointment.doctor.id || ""}
                 >
                     <option value="">Select doctor</option>
                     {doctors.map((doctor) => {
@@ -255,6 +256,7 @@ const AppointmentPage = () => {
                             animal: selectedAnimal,
                         });
                     }}
+                    value={appointment.animal.id || ""}
                 >
                     <option value="">Select animal</option>
                     {animals.map((animal) => {

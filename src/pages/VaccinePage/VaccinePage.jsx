@@ -176,7 +176,7 @@ const VaccinePage = () => {
                     value={vaccine.protectionFinishDate}
                     placeholder="Protection Finish Date"
                 />
-                <select value={vaccine.animal.id} onChange={handleAnimalSelect}>
+                <select value={vaccine.animal.id || ""} onChange={handleAnimalSelect}>
                     <option value="">Select Animal</option>
                     {animals.map((animal) => (
                         <option key={animal.id} value={animal.id}>
@@ -184,7 +184,7 @@ const VaccinePage = () => {
                         </option>
                     ))}
                 </select>
-                <select value={vaccine.report.id} onChange={handleReportSelect}>
+                <select value={vaccine.report.id || ""} onChange={handleReportSelect}>
                     <option value="">Select Report</option>
                     {reports.map((report) => (
                         <option key={report.id} value={report.id}>

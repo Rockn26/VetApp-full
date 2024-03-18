@@ -199,8 +199,9 @@ const AnimalPage = () => {
                         );
                         setAnimal({ ...animal, customer: selectedCustomer });
                     }}
+                    value={animal.customer.id || ""}
                 >
-                    <option value={null}>Select a customer</option>
+                    <option value="">Select a customer</option>
                     {customers.map((customer) => (
                         <option key={customer.id} value={customer.id}>
                             {customer.name}
