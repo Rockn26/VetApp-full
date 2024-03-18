@@ -31,3 +31,8 @@ export const updateCustomer = async (customer) => {
 
     return data;
 };
+
+export const filterCustomersByName = async (customerName) => {
+    const { data } = await axios.get(import.meta.env.VITE_APP_BASE_URL + `customers/name/${customerName}`);
+    return data;
+    }
