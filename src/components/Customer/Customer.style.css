@@ -1,5 +1,69 @@
-.customer-component{
+.customer-component {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-component input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+
+.customer-component button {
+    border: none;
+    color: white;
+    padding: 10px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+
+.customer-update-button {
+    background-color: #8c70a7;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.customer-delete-button {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+
+.customer-update-button:hover{
+    background-color: #6c5080;
+}
+
+
+.customer-delete-button:hover{
+    background-color: #c0392b; 
 }

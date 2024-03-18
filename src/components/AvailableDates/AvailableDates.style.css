@@ -1,5 +1,49 @@
 .available-dates-component {
-    display: flex;
-    justify-self: center;
-    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.available-dates-component h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.available-dates-component > div:not(:last-child) {
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.available-dates-component button {
+    background-color: #8c70a7;
+    padding: 8px 12px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.available-dates-component button:hover {
+    background-color: #764c8a; 
+
+}
+
+
+.add-date-section {
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+

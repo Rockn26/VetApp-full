@@ -1,4 +1,4 @@
-.doctor-component {
+.vaccine-component {
     background-color: #fff;
     padding: 15px;
     margin-bottom: 10px;
@@ -10,17 +10,19 @@
     align-items: center;
 }
 
-.doctor-component input[type="text"] {
+.vaccine-component input[type="text"],
+.vaccine-component input[type="date"],
+.vaccine-component select {
     padding: 10px;
     margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     flex-grow: 1;
-    margin-bottom: 10px; /* To ensure spacing when wrapped */
+    margin-bottom: 10px;
 }
 
-.doctor-update-button,
-.doctor-delete-button {
+.vaccine-update-button,
+.vaccine-delete-button {
     background-color: #8c70a7;
     border: none;
     color: white;
@@ -30,14 +32,16 @@
     margin-left: 10px;
 }
 
-.doctor-delete-button {
+
+
+.vaccine-delete-button {
     background-color: #e74c3c;
 }
 
-.doctor-update-button:hover {
+.vaccine-update-button:hover {
     background-color: #764c8a; 
 }
 
-.doctor-delete-button:hover {
+.vaccine-delete-button:hover {
     background-color: #c0392b; 
 }

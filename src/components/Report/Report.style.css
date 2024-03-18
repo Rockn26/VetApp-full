@@ -1,4 +1,4 @@
-.doctor-component {
+.report-component {
     background-color: #fff;
     padding: 15px;
     margin-bottom: 10px;
@@ -10,34 +10,40 @@
     align-items: center;
 }
 
-.doctor-component input[type="text"] {
+.report-component input[type="text"],
+.report-component input[type="number"],
+.report-component select {
     padding: 10px;
     margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     flex-grow: 1;
-    margin-bottom: 10px; /* To ensure spacing when wrapped */
+    margin-bottom: 10px;
 }
 
-.doctor-update-button,
-.doctor-delete-button {
+.report-update-button,
+.report-delete-button {
     background-color: #8c70a7;
     border: none;
     color: white;
     padding: 10px 20px;
-    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     cursor: pointer;
+    border-radius: 10px;
     margin-left: 10px;
 }
 
-.doctor-delete-button {
+.report-delete-button {
     background-color: #e74c3c;
 }
 
-.doctor-update-button:hover {
+
+.report-update-button:hover {
     background-color: #764c8a; 
 }
 
-.doctor-delete-button:hover {
+.report-delete-button:hover {
     background-color: #c0392b; 
 }

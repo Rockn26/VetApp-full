@@ -1,0 +1,38 @@
+.available-date-component {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.available-date-component input[type="date"],
+.available-date-component select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.available-date-component button {
+    background-color: #8c70a7;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.available-dates-component button:hover {
+    background-color: #764c8a; 
+
+}
+
+.available-date-component button.delete-button {
+    background-color: #f44336;
+}
+

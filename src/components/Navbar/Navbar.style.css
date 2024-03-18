@@ -1,6 +1,22 @@
 .navbar-component {
+    background-color: #4b3f6b; 
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
-    width: 100%;
-    gap: 20px;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-component a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-component a:hover {
+    background-color: #6d5a8d; 
+    color: #ffffff;
 }

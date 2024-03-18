@@ -1,0 +1,33 @@
+.appointment-content {
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.appointment-content h2 {
+    color: #4b3f6b;
+    margin-bottom: 10px;
+}
+
+.appointment-content input[type="datetime-local"],
+.appointment-content select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.appointment-content button {
+    background-color: #8c70a7;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
