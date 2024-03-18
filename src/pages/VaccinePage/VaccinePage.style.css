@@ -1,0 +1,104 @@
+.vaccine-page-component {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.vaccine-page-component h2 {
+    color: #4b3f6b;
+    margin-bottom: 20px;
+}
+
+.vaccine-filter-animalName,
+.vaccine-filter-dates {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vaccine-filter-animalName input,
+.vaccine-filter-dates input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Full width with some padding */
+}
+
+.vaccine-filter-dates {
+    flex-wrap: wrap;
+}
+
+.vaccine-filter-dates input {
+    flex-basis: calc(50% - 20px); /* Adjusts for two inputs side by side */
+    margin-bottom: 10px; /* Space between inputs */
+}
+
+.vaccine-page-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.vaccine-select-component {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vaccine-select-component select {
+    padding: 10px;
+    margin: 5px 0; /* Yukarı ve aşağıya küçük bir boşluk ekler */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(50% - 10px); /* İki select yan yana sığsın diye */
+    flex-grow: 1; /* İçerik ne kadar yer kaplıyorsa o kadar genişlesin */
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.vaccine-add {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.vaccine-add input[type="text"],
+.vaccine-add input[type="date"],
+.vaccine-add select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex-basis: calc(50% - 10px); /* Half width for responsive design */
+}
+
+.vaccine-add button {
+    padding: 10px 20px;
+    background-color: #8c70a7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.vaccine-add button:hover {
+    background-color: #764c8a; 
+}

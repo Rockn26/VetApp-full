@@ -1,19 +1,17 @@
-.doctor-page-component {
+.report-page-component {
     font-family: 'Arial', sans-serif;
     color: #333;
     padding: 20px;
     background-color: #f4f4f4;
 }
 
-.doctor-page-content h2 {
+.report-page-component h2 {
     color: #4b3f6b;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.doctor-page-content,
-.doctor-add,
-.availableDate-component
- {
+.report-page-content,
+.report-add {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -21,10 +19,9 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.doctor-add input[type="text"],
-.availableDate-component select,
-.availableDate-component input[type="date"]
- {
+.report-add input[type="text"],
+.report-add input[type="number"],
+.report-add select {
     width: calc(50% - 22px);
     padding: 10px;
     margin-bottom: 10px;
@@ -33,7 +30,7 @@
     margin-right: 10px;
 }
 
-.doctor-add button {
+.report-add button {
     background-color: #8c70a7;
     border: none;
     color: white;
@@ -42,9 +39,6 @@
     cursor: pointer;
 }
 
-.doctor-add button:hover {
-    background-color: #764c8a; 
-}   
-
-
-
+.report-add button:hover {
+    background-color: #764c8a;
+}

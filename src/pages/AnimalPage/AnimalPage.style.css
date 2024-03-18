@@ -1,6 +1,76 @@
-.animal-page-component{
+.animal-page-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.animal-page-content h2,
+.animal-page-content h4 {
+    color: #4b3f6b;
+}
+
+.animal-page-content input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.filter-animalNames {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    margin-bottom: 20px;
+}
+
+.filter-animalNames input,
+.filter-animalNames h4 {
+    flex: 1; /* Her bir elemana eşit alan ayır */
+    margin: 0 10px; 
+}
+
+.filter-animalNames input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width: 45%; /* Input alanlarının maksimum genişliği */
+}
+
+
+.animal-add {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.animal-add input,
+.animal-add select {
+    width: calc(50% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.animal-add button {
+    background-color: #8c70a7;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.animal-add button:hover {
+    background-color: #6c5080;
 }
