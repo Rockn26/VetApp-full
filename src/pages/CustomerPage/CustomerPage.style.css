@@ -1,6 +1,77 @@
-.customer-page-component{
+.customer-page-component {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.customer-page-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.customer-page-content h2,
+.customer-page-content h4 {
+    color: #4b3f6b;
+}
+
+.customer-page-content input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.filter-customerName {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.filter-customerName h4 {
+    margin-right: 10px;
+    color: #4b3f6b;
+    font-size: 16px;
+}
+
+.filter-customerName input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width: 300px; /* Input alanının maksimum genişliği */
+}
+
+.customer-add {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.customer-add input[type="text"] {
+    width: calc(50% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.customer-add button {
+    background-color: #8c70a7;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.customer-add button:hover {
+    background-color: #6c5080;
 }

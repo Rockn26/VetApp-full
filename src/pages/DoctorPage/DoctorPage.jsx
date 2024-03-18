@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { createDoctor, getDoctors } from "../../api/Doctor";
 import "./DoctorPage.style.css";
 import Doctor from "../../components/Doctor/Doctor";
-import { handleAdd } from "../../handler/DoctorHandler";
-import Adder from "../../components/Adder/Adder";
 import AvailableDates from "../../components/AvailableDates/AvailableDates";
+import ErrorContext from "../../context/error/ErrorContext";
 
 
 
 const DoctorPage = () => {
+  const {setShowAlert, setAlertMessage} = useContext(ErrorContext)
   const [doctors, setDoctors] = useState([]);
   useEffect(() => {
     getDoctors().then((data) => {
@@ -29,11 +29,30 @@ const DoctorPage = () => {
     setDoctor({ ...doctor, [event.target.name]: event.target.value });
   }
 
+  const handleAdd = () => {
+    createDoctor(doctor).then((data) => {
+      setDoctors(prev => [...prev, data]);
+      setDoctor({
+        name: "",
+        phone: "",
+        email: "",
+        address: "",
+        city: "",
+      });
+    }).catch(error => {
+      setShowAlert(true)
+      setAlertMessage(error.response.data)
+      setTimeout(() => {
+          setShowAlert(false)
+      }, 3000);
+  })
+  }
+
   
 
   return (
     <div className="doctor-page-component">
-      <h2>Doctor Management</h2>
+      <h1>Doctor Management</h1>
       <div className="doctor-page-content">
         <h2>Doctor List</h2>
         <p>
@@ -81,10 +100,12 @@ const DoctorPage = () => {
           placeholder="City"
         />
         
-        <Adder handlerFunction={() => {handleAdd(doctor, setDoctor, setDoctors)}}/>
+        <button onClick={handleAdd}>Add</button>
 
       </div>
+      <div className="availableDate-component">
        < AvailableDates doctors={doctors}  />
+       </div>
     </div>
 
   );
