@@ -12,6 +12,9 @@ import { getReports } from "../../api/Report";
 import ErrorContext from "../../context/error/ErrorContext";
 import { createVaccine } from "../../api/Vaccine";
 
+
+
+
 const VaccinePage = () => {
     const { setShowAlert, setAlertMessage } = useContext(ErrorContext);
     const baseVaccine = {
@@ -81,6 +84,7 @@ const VaccinePage = () => {
     const handleAdd = () => {
         createVaccine(vaccine)
             .then((data) => {
+                toast.success("Vaccine added successfully");
                 setVaccines((prev) => [...prev, data]);
                 setVaccine({
                     name: "",
@@ -105,7 +109,7 @@ const VaccinePage = () => {
             })
             .catch((error) => {
                 setShowAlert(true);
-                setAlertMessage(error.response.data);
+                toast.error(error.response.data || "Bir hata oluştu.");
                 setTimeout(() => {
                     setShowAlert(false);
                 }, 3000);
@@ -115,6 +119,7 @@ const VaccinePage = () => {
     return (
         <div className="vaccine-page-component">
             <h2>Vaccine Management</h2>
+            
             <div className="vaccine-filter-animalName">
             <input
                 type="text"

@@ -10,6 +10,8 @@ import { createAnimal } from "../../api/Animal";
 import Animal from "../../components/Animal/Animal";
 import "./AnimalPage.style.css";
 import ErrorContext from "../../context/error/ErrorContext";
+import ErrorAlert from "../../context/error/ErrorAlert";
+
 
 
 const AnimalPage = () => {
@@ -118,6 +120,7 @@ const AnimalPage = () => {
     return (
         <div className="animal-page-component">
             <h1>Animal Management</h1>
+
             <div className="animal-page-content">
                 <h2>Animal List</h2>
                 <div className="filter-animalNames">

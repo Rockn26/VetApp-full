@@ -11,9 +11,12 @@ import { getDoctors } from "../../api/Doctor";
 import { getAnimals } from "../../api/Animal";
 import { createAppointment } from "../../api/Appointment";
 import ErrorContext from "../../context/error/ErrorContext";
+import Alert from "../../components/Alert/Alert";
 
 const AppointmentPage = () => {
-    const { setShowAlert, setAlertMessage } = useContext(ErrorContext);
+    const { setShowAlert, setAlertMessage, alertMessage, showAlert } = useContext(ErrorContext);
+
+   
     const [appointments, setAppointments] = useState([]);
     useEffect(() => {
         getAppointments().then((data) => {
@@ -82,7 +85,6 @@ const AppointmentPage = () => {
 
         setDoctorFilter(updatedFilter);
 
-        // Güncellenmiş filtre değerlerini kullanarak fonksiyonu çağırın
         filterAppointmentsByDoctorNameAndDateBetween(
             updatedFilter.doctorName,
             updatedFilter.startDate,

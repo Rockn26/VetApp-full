@@ -64,3 +64,14 @@ h1 {
 .appointment-add button:hover {
   background-color: #6c5080;
 }
+
+.error-message {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #D8000C;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
