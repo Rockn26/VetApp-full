@@ -15,6 +15,7 @@ import { createVaccine } from "../../api/Vaccine";
 
 
 
+
 const VaccinePage = () => {
     const { setShowAlert, setAlertMessage } = useContext(ErrorContext);
     const baseVaccine = {
@@ -84,7 +85,6 @@ const VaccinePage = () => {
     const handleAdd = () => {
         createVaccine(vaccine)
             .then((data) => {
-                toast.success("Vaccine added successfully");
                 setVaccines((prev) => [...prev, data]);
                 setVaccine({
                     name: "",
@@ -109,7 +109,7 @@ const VaccinePage = () => {
             })
             .catch((error) => {
                 setShowAlert(true);
-                toast.error(error.response.data || "Bir hata oluştu.");
+                setAlertMessage(error.response.data);
                 setTimeout(() => {
                     setShowAlert(false);
                 }, 3000);
